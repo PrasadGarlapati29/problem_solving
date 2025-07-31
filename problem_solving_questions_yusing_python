@@ -1,0 +1,449 @@
+#Check if a username and password are equal.
+
+# username=input("Enter your username")
+# password=input("Enterr your password")
+
+# if len(username)==len(password):
+#     print("Equal")
+# else:
+#     print("Not Equal")
+
+#2. Check if a person is eligible to vote based on their age.
+
+# age=int(input("Enter your age"))
+
+# if age>=18:
+#     print("Eligible to vote")
+# else:
+#     print("Not Eligible to vote")
+
+# 3. Determine if a number is even or odd
+#    - Using the modulus operator (`%`).
+
+# a=4
+# if a%2==0:
+#     print("Even")
+# else:
+#     print("Not Even")
+#    - Using the floor division method.
+
+# a=4
+# if a//2*2 ==a:
+#     print(a//2*2)
+#     print("even")
+# else:
+#     print("Odd")
+
+#    - Using bitwise operations (`&`).
+
+# a=3
+# if (a&1)==0:
+#     print("Even")
+# else:
+#     print("Odd")
+
+# 4. Check if a number is positive or negative.
+
+# a=0
+
+# if (a>0):
+#     print("A is positive")
+# elif (a<0):
+#     print("A is negative")
+# else:
+#     print("A is Zero")
+
+# 5. Find the maximum of three numbers.
+
+# a=14
+# b=7
+# c=5
+
+# if (a>b) and (a>c):
+#     print("A is Greater")
+# elif (b>c) and (b>a):
+#     print("B is greater")
+# else:
+#     print("c is greater")
+
+
+# 6. Print the multiplication table of a given number.
+# n=5
+# for i in range(1,10+1):
+#     print("{} * {}  =  {}".format(n,i,n*i))
+
+# n=5
+
+# i=1
+
+# while i<=10:
+#     print("{} * {}  =  {}".format(n,i,n*i))
+#     i+=1
+
+# m=5
+# n=8
+
+# while m<=n:
+#     i=1
+#     while i<=10:
+#         print("{} * {}  =  {}".format(m,i,m*i))
+#         i+=1
+#     m+=1
+#     print()
+
+# 7. Find all even numbers within a specified range.
+
+# 8. Find all odd numbers within a specified range.
+
+# for i in range(1,50):
+#     if i%2!=0:
+#         print(i,end=" ")
+
+# m=50
+# i=1
+
+# while i<=50:
+#     if i%2 !=0:
+#         print(i,end=" ")
+#     i+=1
+
+
+# 9. Count even numbers in a given range.
+# count=0
+# for i in range(1,21):
+#     if i%2==0:
+#         print(i,count)
+#         count+=1
+# print(count)
+
+# using while
+
+# count=0
+# i=1
+
+# while i<=30:
+#     if i%2==0:
+#         count+=1
+#     i+=1
+# print(count)
+# 10. Count odd numbers in a given range.
+# count=0
+# i=1
+
+# while i<=20:
+#     if i%2!=0:
+#         count+=1
+#     i+=1
+# print(count)
+# 11. Swap two variables without using a temporary variable.
+# a=2
+# b=5
+
+# a=a+b#7
+# b=a-b#2
+# a=a-b#5
+
+# print(a)
+# print(b)
+# 12. Use the ternary operator for decision-making
+
+# a=3
+# b=4
+# greater= "greater" if a>b else "not greater"
+# print(greater)
+# 13. Check if a number is a prime number.
+# n=int(input("Enter a number"))
+# is_prime=True
+# for i in range(2,n):
+#     if n%i==0:
+#         is_prime=False
+#         break
+# if is_prime:
+#     print(n,"is prime")
+# 14. Count the number of prime numbers in a specific range.
+
+# listt=[]
+# n=10
+# for i in range(1,n):
+#     is_prime=True
+#     for j in range(2,i):
+#         if i%j==0:
+#             is_prime=False
+#             break
+#     if is_prime:
+#         listt.append(i)
+# print(listt)
+
+# 15. Find the next prime number after a given number.
+
+# The next prime number that comes after n
+
+# Example: If n = 10, the next prime number is 11
+
+# n=int(input("Enter a number"))
+# num=n+1
+# is_prime=True
+# count=0
+# while True:
+#     is_prime=True
+#     for i in range(2,num):
+#         if num%i==0:
+#             is_prime=False
+#             break
+#     if is_prime:
+#         print(num)
+#         break
+
+#     num+=1
+
+
+# 16. Find the largest prime number within a specified range.
+
+# start=10
+# end=50
+
+# for i in range(start,end):
+#     is_prime=True
+#     for j in range(2,i):
+#         if i%j==0:
+#             is_prime=False
+#             break
+#     if is_prime:
+#         last=i
+# print(last)
+
+# n=10
+# start=2
+# num=n+1
+# while True:
+#     is_prime=True
+#     while True:
+#         if num%start==0:
+#             is_prime=False
+#             break
+#     if is_prime:
+#         print(start)
+#     start+=1
+#     num+=1
+
+# def prime(n):
+#     if n<2:
+#         return False
+#     for i in range(2,n):
+#         if n%i==0:
+#             return False
+#     return True
+# n=int(input("Enter a number to find prime"))
+# lower=n-1
+# upper=n+1
+
+# while True:
+#     if n>2 and prime(lower):
+#         break
+#     lower-=1
+
+# while True:
+#     if prime(upper):
+#         break
+#     upper+=1
+
+# if (n-lower)==(upper-n):
+#     print("Equal distance")
+# elif (n-lower)<(upper-n):
+#     print(lower)
+# else:
+#     print(upper)
+
+# def is_prime(n):
+#     if n<2:
+#         return False
+#     for i in range(2,n):
+#         if n%i==0:
+#             return False
+#     return True
+# n=int(input("Enter a number to find prime"))
+# lower=n-1
+# upper=n+1
+
+# while True:
+#     if n>2 and is_prime(lower):
+#         break
+#     lower-=1
+
+# while True:
+#     if is_prime(upper):
+#         break
+#     upper+=1
+
+# if (n-lower)==(upper-n):
+#     print("EQaul Distance")
+# elif (n-lower)<(upper-n):
+#     print(lower)
+# else:
+#     print(upper)
+
+# 18. Print all the digits in a number.
+
+#n=5
+# n=1234
+# num=n
+# while n>0:
+#     digit=n%10
+#     print(digit,end=" ")
+#     n//=10
+
+# 19. Extract and print prime digits from a given number.
+
+# def prime(n):
+#     if n<2:
+#         return False
+#     for i in range(2,n):
+#         if n%i==0:
+#             return False
+#     return True
+
+# n=1234
+
+# for i in str(n):
+#     i=int(i)
+#     if prime(i):
+#         print(f"{i} is prime")
+#     else:
+#         print(f"{i} is Not Prime")
+
+
+# Print all the digits in a number.
+# number=1234
+# while number>0:
+#     digit=number%10
+#     print(digit,end="")
+#     number=number//10
+
+# 19. Extract and print prime digits from a given number.
+# n=1234567
+
+# def prime(n):
+#     if n<2:
+#         return False
+#     for i in range(2,n):
+#         if n%i==0:
+#             return False
+#     return True
+
+# while n>0:
+#     digit=n%10
+#     if prime(digit):
+#         print(digit,end=" ")
+#     n=n//10
+
+# 20. Reverse a number.
+
+# n=1234
+# s=n
+# reverse=0
+# while n>0:
+#     digit=n%10
+#     reverse=reverse*10+digit
+#     n=n//10
+# print(type(reverse))    
+
+# 21. Check if a number is a palindrome.
+# n=121
+# s=n
+# reverse=0
+# while n>0:
+#     digit=n%10
+#     reverse=reverse*10+digit
+#     n=n//10
+
+# if reverse==s:
+#     print("number is palindrome")
+# else:
+#     print("Number is not a plaindrome") 
+
+# 22. Calculate the factorial of a number.
+
+# def factorial(n):
+#     fact=1
+#     for i in range(1,n+1):
+#         fact=fact*i
+#     return fact
+# n=5
+# res=factorial(5)
+# print(res)
+
+# 23. Determine if a number is a perfect number.
+# def perfect(n):
+#     sum=0
+#     for i in range(1,n//2+1):
+#         if n%i==0:
+#             sum+=i
+#     if sum==n:
+#         return "Perfect number"
+#     else:
+#         return "Not perfect number"
+# s=perfect(496)
+# print(s)
+
+# 24. Check if a number is a perfect square.
+# n=16
+
+# ps=int(n**(0.5))
+# if ps*ps==n:
+#     print("Perfect square")
+# else:
+#     print("Not perfect square")
+# 25. Verify if a number is a sunny number.
+# def sunny(number):
+#     ps=(number+1)**0.5
+#     if ps==int(ps):
+#         return "Sunny number"
+#     else:
+#         return "Not a sunny number"
+# s=sunny(8)
+# print(s)
+# 26. Identify if a number is a strong number.
+
+# n=1234
+# s=n
+# sum=0
+# while n>0:
+#     digit=n%10
+#     fact=1
+#     for i in range(1,digit+1):
+#         fact=fact*i
+#     print(fact)
+#     sum=sum+fact
+#     n=n//10
+# print(sum)
+
+    
+
+
+# 27. Check if a number is an Armstrong number.
+# n=153
+# o=n
+# s=len(str(n))
+
+# sum=0
+# while n>0:
+#     digit=n%10
+#     sum=sum+digit**s
+#     n=n//10
+
+# if o==sum:
+#     print("Armstrong number")
+# else:
+#     print("Not armstroing number")
+
+# 28. Generate Fibonacci numbers up to a given limit.
+
+# n=5
+
+# for i in range(2,n+1):
+#     a,b=0,1
+#     print(a,b)
+#     c=a+b
+#     print(c)
+#     a,b=b,c
+    
