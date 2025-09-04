@@ -1,0 +1,27 @@
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def nearest_prime(n):
+    # check if n itself is prime
+    if is_prime(n):
+        return n
+    
+    lower = n - 1
+    upper = n + 1
+    
+    while True:
+        if lower >= 2 and is_prime(lower):
+            return lower
+        if is_prime(upper):
+            return upper
+        lower -= 1
+        upper += 1
+
+print(nearest_prime(13))  # 13 itself (since it’s prime)
+print(nearest_prime(14))  # 13 (closer than 17)
+print(nearest_prime(20))  # 19
